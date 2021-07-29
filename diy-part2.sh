@@ -11,7 +11,7 @@
 #
 
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # themes添加（svn co 命令意思：指定版本如https://github）
 #git clone https://github.com/Leo-Jo-My/luci-theme-Butterfly package/luci-theme-Butterfly
@@ -33,6 +33,9 @@ sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\
 #添加额外非必须软件包
 #adguardhome广告拦截很强大
 git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
+
+#passwall
+git clone  https://github.com/xiaorouji/openwrt-passwall
 
 #bypass科学学习
 #git clone https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
